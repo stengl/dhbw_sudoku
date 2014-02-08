@@ -6,6 +6,8 @@
 
 #include "helpers.h"
 #include "macros.h"
+#include "tools.h"
+#include "variables.h"
 
 
 

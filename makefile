@@ -1,9 +1,11 @@
 CC = gcc -Wall
 
-sudoku: sudoku.o
-	CC -o $@ $<
-sudoku.o: sudoku.c
+sudoku: sudoku.o tools.o variables.o helpers.o
+	CC -o $@ $^
+sudoku.o tools.o variables.o helpers.o: sudoku.c
 	CC -c $<
+	
+sudoku.o: 
 
 all: clear sudoku run
 
